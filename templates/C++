@@ -1,0 +1,26 @@
+#include <iostream>
+#include <cstring>
+
+using namespace std;
+
+#pragma GCC optimize("O2")
+#pragma GCC optimize ("unroll-loops")
+#pragma GCC target("sse,sse2,sse3,ssse3,sse4,popcnt,abm,mmx,avx,tune=native")
+
+#pragma warning(disable:4786)
+#pragma warning(disable:4996)
+
+typedef long long ll;
+
+#define fast_io ios_base::sync_with_stdio(false),cin.tie(NULL), cout.tie(NULL)
+#define MEM(a, b) memset(a, (b), sizeof(a))
+#define CLR(a) memset(a, 0, sizeof(a))
+
+int main()
+{
+    fast_io;
+
+    
+
+    return 0;
+}

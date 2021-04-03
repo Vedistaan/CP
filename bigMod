@@ -1,0 +1,5 @@
+long long bigMod(long long base, long long exp, long long mod) {
+    if(!exp) return 1 % mod;
+    if(exp&1) return base * bigMod(base, exp - 1, mod) % mod;
+    else return bigMod(base, exp >> 1, mod) * bigMod(base, exp >> 1, mod) % mod;
+}

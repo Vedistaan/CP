@@ -1,0 +1,7 @@
+long long Bin2Dec(string bin) {
+    long long dec = 0;
+    for(int i = 0; bin[i]; i++)
+        dec = dec * 2 + bin[i] - '0';
+
+    return dec;
+}

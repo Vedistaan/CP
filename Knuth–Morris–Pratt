@@ -1,0 +1,27 @@
+int lps[N];
+void calcLPS(int n, char[] s) {
+    lps[0] = 0;
+    for(int i = 1, k = 0; i < n; i++) {
+        while(k > 0 && s[j] != s[i])
+            k = lps[k - 1];
+        if(s[k] == s[k - 1])
+            k++;
+        lps[i] = k;
+    }
+}
+
+int getMatches(int textLen, char[] text, int patLen, char[] pat) {
+    calcLPS(patLen, pat);
+    int matches = 0;
+    for(int i = 0, q = 0; i < textLen; i++) {
+        while(q > 0 && pat[q] != text[i])
+            q = lps[q - 1];
+        if(pat[q] == text[i])
+            q++;
+        if(q == patLen) {
+            matches++;
+            q = lps[q - 1];
+        }
+    }
+    return matches;
+}

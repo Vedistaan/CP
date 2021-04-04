@@ -1,0 +1,11 @@
+double EPS = 1e-9; // 10^-9 = 0.0000000009
+boolean isEqual(double a, double b) {
+   return abs(a - b) <= EPS;
+}
+boolean isGreater(double a, double b) { // is a greater than b
+   return a > b + EPS;
+}
+boolean isSmaller(double a, double b) { // is a smaller than b
+   //return isGreater(b, a);
+   return a + EPS < b;
+}

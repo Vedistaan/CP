@@ -1,0 +1,13 @@
+int N;
+int[] SOD = new int[N + 1];
+void generateSOD() {
+   for(int i = 1; i <= N; i++) {
+       for(int j = i; j <= N; j += i) {
+           SOD[j] += i;
+       }
+   }
+}
+
+boolean isPrimeUsingSOD(int N) {
+   return SOD[N] == N + 1;
+}

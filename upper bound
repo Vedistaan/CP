@@ -1,0 +1,21 @@
+//Similar to upper_bound() from stl
+
+/*
+Algorithm:
+1. l = 0, r = n - 1.
+2. Compare key with arr[mid].
+3. If arr[mid] <= key, then l = mid + 1.
+4. Else r = mid.
+5. Repeat the above steps untill l < r.
+6. l is the upper bound now.
+*/
+
+int l = 0, r = n - 1;
+while(l < r) {
+    int mid = l + (r - l) / 2;
+            
+    if(arr[mid] <= a)
+        l = mid + 1;
+    else
+       r = mid;
+}

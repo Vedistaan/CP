@@ -14,7 +14,7 @@ int l = 0, r = n - 1;
 while(l < r) {
     int mid = l + (r - l) / 2;
             
-    if(arr[mid] <= a)
+    if(arr[mid] <= key)
         l = mid + 1;
     else
        r = mid;

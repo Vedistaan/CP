@@ -2,7 +2,7 @@
 
 /*
 Algorithm:
-1. l = 0, r = n - 1.
+1. l = 0, r = n.
 2. Compare key with arr[mid].
 3. If arr[mid] >= key, then r = mid.
 4. Else l = mid + 1.
@@ -10,7 +10,7 @@ Algorithm:
 6. l is the lower bound now.
 */
 
-int l = 0, r = n - 1;
+int l = 0, r = n;
 while(l < r) {
     int mid = l + (r - l) / 2;
 

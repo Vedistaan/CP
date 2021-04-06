@@ -1,0 +1,7 @@
+int gcd ( int a, int b ) { // O(log(min(a, b))
+   if ( b == 0 ) return a;
+   return gcd ( b, a % b );
+}
+long lcm(long a, long b) {
+   return (a / gcd(a, b)) * b;
+}

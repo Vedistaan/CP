@@ -1,7 +1,19 @@
-long long Bin2Dec(string bin) {
-    long long dec = 0;
-    for(int i = 0; bin[i]; i++)
-        dec = dec * 2 + bin[i] - '0';
+string intToBinary (int n) {
+    string res;
+    for ( ; n != 0; n /= 2)
+        if (n&1)
+            res += '1';
+        else
+            res += '0';
+    reverse (res.begin(), res.end());
 
-    return dec;
+    return res;
+}
+
+int binToInteger(string n) {
+    int res = 0;
+    for(int i = 0; n[i]; i++)
+        res = res * 2 + n[i] - '0';
+
+    return res;
 }
